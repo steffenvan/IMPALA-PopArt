@@ -68,7 +68,7 @@ class PopArtFeedForward(snt.AbstractModule):
         frame = tf.to_float(frame)
         frame /= 255
 
-        # Matching PNN's architecture       
+        # Using the smaller network (without residual blocks).   
         with tf.variable_scope('convnet'):
             conv_out = shallow_convolution(frame)
 
